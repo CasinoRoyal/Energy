@@ -2,16 +2,17 @@ header.header
 
   nav.header__navigation
     a.logo-box
-      img.logo
+      img.logo(src="../img/vector/logo-mobile.svg", alt="Логотип 'Cat Energy'")
         
     include ../_components/shop-name
 
-    include ../_components/navigation
-  
-  h2.header__title Функциональное питание для котов
-  span.header__subtitle Занялся собой? Займись котом!
+    //include ../_components/navigation
+    button.header__hamburger
+  .header__main
+    h2.header__title Функциональное питание для котов
+    span.header__subtitle Занялся собой? Займись котом!
 
-  .header__pic
-    img(src="../img/index-can-mobile.png", alt="Изображение упаковки 'Cat Energy'")
+    .header__pic
+      img(src="../img/index-can-mobile.png", alt="Изображение упаковки 'Cat Energy'")
 
-  a.btn.header__btn(href="#") Подобрать программу
+    a.btn.btn--header(href="#") Подобрать программу

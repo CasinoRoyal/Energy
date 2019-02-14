@@ -1,12 +1,23 @@
+// Abstract
+@import '_abstract/_variables';
+
 // Base
 @import '_base/_normalize';
 @import '_base/_base';
 @import '_base/_fonts';
 
 // Sections
-
 @import '_sections/_header';
-
+@import '_sections/_programs';
+@import '_sections/_advantages';
+@import '_sections/_example';
+@import '_sections/_map';
+@import '_sections/_footer';
 
 // Components
+@import '_components/_logo';
+@import '_components/_shop-name';
 @import '_components/_navigation';
+@import '_components/_buttons';
+@import '_components/_heading';
+@import '_components/_social';

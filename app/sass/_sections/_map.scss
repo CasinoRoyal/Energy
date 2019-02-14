@@ -1,0 +1,24 @@
+.map {
+  height: 360px;
+
+  background-image: url(../img/map.jpg);
+  background-size: cover;
+}
+
+.address-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+
+  background-color: #fff;
+}
+
+.address__title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.address {
+  font-family: Arial, sans-serif;
+  color: $color-text-grey;
+}

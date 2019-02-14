@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  list-style: none;
+}
+
+footer .social {
+  padding-bottom: 20px;
+}
+
+.social__item {
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
