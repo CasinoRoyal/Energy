@@ -1,5 +1,5 @@
 .advantages {
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .advantage {
@@ -11,15 +11,15 @@
   color: #444444;
  
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
     } 
 }
 
 .advantage__pic {
-  width: 60px;
-  height: 60px;
+  width: 6rem;
+  height: 6rem;
   flex-shrink: 0;
-  margin-right: 20px;
+  margin-right: 2rem;
 
   background-color: $color-primary;
 }

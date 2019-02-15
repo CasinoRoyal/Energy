@@ -1,5 +1,5 @@
 .map {
-  height: 360px;
+  height: 36rem;
 
   background-image: url(../img/map.jpg);
   background-size: cover;
@@ -8,13 +8,13 @@
 .address-box {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px;
+  padding: 3rem 2rem;
 
   background-color: #fff;
 }
 
 .address__title {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 

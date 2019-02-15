@@ -1,5 +1,5 @@
 .header {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   
   text-align: center;
   letter-spacing: .5px;
@@ -11,22 +11,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 20px;
-  padding: 10px 0;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #e6e6e6;
 
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   text-transform: uppercase;
 
-  color: #111;
   background-color: #fff;
 }
 
 .header__hamburger {
   position: relative;
-  width: 24px;
-  height: 2px;
+  width: 2.4rem;
+  height: .2rem;
   border: none;
 
   background-color: #222;
@@ -37,33 +35,45 @@
     content: '';
     position: absolute;
     left: 0;
-    width: 24px;
-    height: 2px;
+    width: 2.4rem;
+    height: .2rem;
 
     background-color: #222;
   }
 
-  &::before { top: -6px; }
-  &::after  { top: 6px; }
+  &::before { top: -.6rem; }
+  &::after  { top: .6rem; }
 }
 
 .header__main {
+  position: relative;
+  height: 30rem;
+  margin-bottom: 13rem;
+
   background-image: url(../img/header-background.jpg);
   background-repeat: no-repeat;
-
+  background-position-x: center;
+  background-color: #65a93c;
 }
 
 .header__title {
-  padding: 20px 0;
+  padding: 2rem 0;
 
   font-weight: 400;
-  font-size: 36px;
+  font-size: 3.6rem;
 }
 
 .header__subtitle {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 
-  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
+}
+
+.header__pic {
+  position: absolute;
+  bottom: -13.5rem;
+  left: 50%;
+  margin-left: -13.5rem;
 }

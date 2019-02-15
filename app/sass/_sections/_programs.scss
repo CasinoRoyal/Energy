@@ -2,33 +2,33 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 2rem;
 
-  background-color: #f2f2f2;
+  background-color: $color-secondary;
 
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 }
 
 .program__logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
 
   border-radius: 50%;
   background-color: $color-primary;
 }
 
 .program__title {
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .program__description {
-  margin-bottom: 20px;
-  padding: 20px 0;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
   border-bottom: 1px solid #d9d9d9;
 
   font-family: Arial, serif-serif;
@@ -37,7 +37,7 @@
 }
 
 .program__link {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
 
