@@ -9,6 +9,13 @@
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
+
+  @include respond(phone-L) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 30rem;
+    padding: 4rem;
+  }
 }
 
 .program__logo {
@@ -18,12 +25,24 @@
 
   border-radius: 50%;
   background-color: $color-primary;
+
+  @include respond(phone-L) {
+    width: 18rem;
+    height: 18rem;
+    margin: 0;
+    margin-left: auto;
+    order: 1;
+  }
 }
 
 .program__title {
   font-size: 2.4rem;
   font-weight: 400;
   text-transform: uppercase;
+
+  @include respond(phone-L) {
+    font-size: 3rem;
+  }
 }
 
 .program__description {
@@ -34,6 +53,13 @@
   font-family: Arial, serif-serif;
 
   color: #444444;
+
+  @include respond(phone-L) {
+    border: none;
+    width: 60%;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;    
+  }
 }
 
 .program__link {
@@ -42,4 +68,8 @@
   text-transform: uppercase;
 
   color: inherit;
+
+  @include respond(phone-L) {
+    font-size: 1.8rem;
+  }
 }

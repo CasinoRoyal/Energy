@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem;
   font-weight: 400;
   box-sizing: border-box;
 
@@ -25,4 +26,8 @@ img {
 
 .wrapper {
   padding: 0 2rem;
+
+  @include respond(phone-L) {
+    padding: 0 3rem;
+  }
 }

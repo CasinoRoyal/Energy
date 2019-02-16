@@ -1,11 +1,22 @@
 .footer {
   background-color: $color-secondary;
+
+  @include respond(phone-L) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .footer > *:not(:last-child) {
   margin-bottom: 2rem;
 
   border-bottom: 1px solid #d9d9d9;
+
+  @include respond(phone-L) {
+    border: none;
+    margin-bottom: 0;
+  }
 }
 
 .creator {
@@ -14,4 +25,8 @@
   font-family: Arial, sans-serif;
 
   color: $color-text-grey;
+
+  @include respond(phone-L) {
+    padding: 0;
+  }
 }

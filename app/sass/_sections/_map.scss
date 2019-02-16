@@ -7,18 +7,47 @@
 
 .address-box {
   display: flex;
-  justify-content: space-between;
   padding: 3rem 2rem;
 
   background-color: #fff;
+
+  @include respond(phone-L) {
+    
+  }  
 }
 
 .address__title {
+  margin-right: auto;
+
   font-size: 1.6rem;
   text-transform: uppercase;
+
+  @include respond(phone-L) {
+    width: 20rem;
+    margin-left: 4rem;
+    
+    font-size: 2rem;
+  }
 }
 
-.address {
+.address__street {
   font-family: Arial, sans-serif;
   color: $color-text-grey;
+
+  @include respond(phone-L) {
+    width: 19rem;
+    text-align: right;
+    margin-right: 4rem;
+
+    font-size: 1.6rem;
+  }
+}
+
+.address__city {
+
+  @include respond(phone-L) {
+    display: block;
+
+    margin-top: 2rem;
+  }
 }

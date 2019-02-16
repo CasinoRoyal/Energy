@@ -8,6 +8,10 @@
 
 footer .social {
   padding-bottom: 2rem;
+
+  @include respond(phone-L) {
+    padding: 0;
+  }
 }
 
 .social__item {

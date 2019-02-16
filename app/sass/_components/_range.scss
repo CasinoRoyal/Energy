@@ -1,0 +1,41 @@
+.range {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 100%;
+  padding-bottom: 3.5rem;
+
+  background-color: $color-secondary;
+
+  @include respond(phone-L) {
+    position: relative;
+    height: 45rem;
+    justify-content: flex-end;
+    margin-top: 23rem;
+    margin-bottom: 0;
+
+  }
+}
+
+.range__pic {
+  margin-bottom: 3.5rem;
+  text-align: center;
+
+  & img {
+    margin: auto;
+  }
+
+  @include respond(phone-L) {
+    position: absolute;
+    top: -15rem;
+    margin-bottom: 0;
+  }
+}
+
+.range__box {
+  text-align: center;
+
+  @include respond(phone-L) {
+    font-size: 2rem;
+  }
+}

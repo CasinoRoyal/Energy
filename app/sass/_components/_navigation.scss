@@ -1,9 +1,27 @@
 .navigation {
-  
+  flex-basis: 100%;
+  order: 1;
+
+  font-weight: 500;
+
+  color: $color-text-black;
+
+  @include respond(phone-L) {
+    margin-left: auto;
+    flex-basis: auto;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
 }
 
 .navigation__list {
+  list-style: none;
 
+
+  @include respond(phone-L) {
+    display: flex;
+  }
 }
 
 .navigation__item {
@@ -11,6 +29,18 @@
 
   border-top: 2px solid #e6e6e6;
   cursor: pointer;
+
+  @include respond(phone-L) {
+    border-top: none;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $color-primary;
+    }
+  }
 }
 
 .navigation__link {

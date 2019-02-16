@@ -2,11 +2,14 @@
   display: block;
 
   letter-spacing: 0;
-  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
 
-  color: #111;
+  color: $color-text-black;
+
+  @include respond(phone-L) {
+    margin-left: 1rem;
+  }
 }
 
 footer .shop-name {

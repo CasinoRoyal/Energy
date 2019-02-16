@@ -5,20 +5,31 @@
   letter-spacing: .5px;
 
   color: #fff;
+
+  @include respond(phone-L) {
+    text-align: left;
+    color: $color-text-black;
+  }
 }
 
 .header__navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
   border-bottom: 1px solid #e6e6e6;
 
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 
   background-color: #fff;
+
+  @include respond(phone-L) {
+    justify-content: flex-start;
+    border: none;
+  }
 }
 
 .header__hamburger {
@@ -43,6 +54,10 @@
 
   &::before { top: -.6rem; }
   &::after  { top: .6rem; }
+
+  @include respond(phone-L) {
+    display: none;
+  }
 }
 
 .header__main {
@@ -54,6 +69,16 @@
   background-repeat: no-repeat;
   background-position-x: center;
   background-color: #65a93c;
+
+
+  @include respond(phone-L) {
+    height: auto;
+    margin: 0;
+    margin-left: 6rem;
+
+    background-image: none;
+    background-color: #fff;
+  }
 }
 
 .header__title {
@@ -61,6 +86,10 @@
 
   font-weight: 400;
   font-size: 3.6rem;
+
+  @include respond(phone-L) {
+    font-size: 5rem;
+  }
 }
 
 .header__subtitle {
@@ -69,6 +98,10 @@
 
   font-size: 1.4rem;
   text-transform: uppercase;
+
+  @include respond(phone-L) {
+    font-size: 1.8rem;
+  }
 }
 
 .header__pic {
@@ -76,4 +109,13 @@
   bottom: -13.5rem;
   left: 50%;
   margin-left: -13.5rem;
+
+
+  @include respond(phone-L) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-left: 0;
+    text-align: center;
+  }  
 }
