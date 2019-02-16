@@ -14,14 +14,31 @@
     background-color: #68b738;
 
     @include respond(phone-L) {
-      position: absolute;
-      top: 65%;
-      left: 10%;
       padding: 1.2rem 2rem;
       margin: 0;
 
       font-size: 1.6rem;
       color: #fff;
+    }
+
+    @include respond(tab) {
+      padding: 1.5rem 2.5rem;
+      font-size: 2rem;
+    }
+  }
+
+  &--top {
+    display: none;
+
+    @include respond(phone-L) {
+      display: inline-block;
+    }
+  }
+
+  &--bottom{
+
+    @include respond(phone-L) {
+      display: none;
     }
   }
 }

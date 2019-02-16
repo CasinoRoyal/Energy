@@ -33,6 +33,11 @@
     margin-left: auto;
     order: 1;
   }
+
+  @include respond(tab) {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .program__title {
@@ -60,6 +65,11 @@
     margin-bottom: 3rem;
     font-size: 1.4rem;    
   }
+  
+  @include respond(tab) {
+    font-size: 1.6rem;    
+  }
+
 }
 
 .program__link {
@@ -71,5 +81,9 @@
 
   @include respond(phone-L) {
     font-size: 1.8rem;
+  }
+
+  @include respond(tab) {
+    font-size: 2rem;
   }
 }

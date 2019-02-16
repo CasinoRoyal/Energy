@@ -9,10 +9,12 @@ header.header
     include ../_components/navigation
     button.header__hamburger
   .header__main
-    h2.header__title Функциональное питание для котов
-    span.header__subtitle Занялся собой? Займись котом!
+    .header__text-box
+      h2.header__title Функциональное питание для котов
+      span.header__subtitle Занялся собой? Займись котом!
+      a.btn.btn--header.btn--top(href="#") Подобрать программу
 
     .header__pic
       img(src="../img/raster/index-can-mobile@1x.png", alt="Изображение упаковки 'Cat Energy'")
 
-  a.btn.btn--header(href="#") Подобрать программу
+  a.btn.btn--header.btn--bottom(href="#") Подобрать программу
