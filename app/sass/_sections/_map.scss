@@ -3,6 +3,11 @@
 
   background-image: url(../img/map.jpg);
   background-size: cover;
+
+  @include respond(desktop) {
+    position: relative;
+    height: 40rem;
+  }  
 }
 
 .address-box {
@@ -11,8 +16,13 @@
 
   background-color: #fff;
 
-  @include respond(phone-L) {
-    
+  @include respond(desktop) {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    width: 57rem;
+    padding: 6rem 7rem;
+    transform: translateY(-50%);
   }  
 }
 
@@ -28,6 +38,10 @@
     
     font-size: 2rem;
   }
+
+  @include respond(desktop) {
+    margin-left: 0;
+  }  
 }
 
 .address__street {
@@ -41,6 +55,12 @@
 
     font-size: 1.6rem;
   }
+
+  @include respond(desktop) {
+    margin-right: 0;
+
+    text-align: left;
+  }  
 }
 
 .address__city {

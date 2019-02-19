@@ -30,4 +30,8 @@ img {
   @include respond(phone-L) {
     padding: 0 3rem;
   }
+
+  @include respond(phone-L) {
+    padding: 0 4rem;
+  }
 }

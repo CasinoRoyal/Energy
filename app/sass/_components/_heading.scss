@@ -1,6 +1,7 @@
 .heading {
   width: 100%;
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   font-size: 3.6rem;
   font-weight: 400;
@@ -10,7 +11,8 @@
   }
   
   @include respond(tab) {
-    padding: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     font-size: 6rem;
   }

@@ -1,3 +1,11 @@
+.programs {
+
+  @include respond(laptop) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .program {
   display: flex;
   align-items: center;
@@ -16,6 +24,26 @@
     height: 30rem;
     padding: 4rem;
   }
+
+  @include respond(laptop) {
+    flex-direction: row;
+    align-items: center;
+    width: 45rem;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond(desktop) {
+    width: 57rem;
+    
+    &:not(:last-child) {
+      margin-right: 8rem;
+    }
+  }  
 }
 
 .program__logo {
@@ -38,6 +66,13 @@
     width: 20rem;
     height: 20rem;
   }
+
+  @include respond(laptop) {
+    width: 10rem;
+    height: 10rem;
+    margin: 0;
+    order: 0;  
+  }
 }
 
 .program__title {
@@ -47,6 +82,11 @@
 
   @include respond(phone-L) {
     font-size: 3rem;
+  }
+
+  @include respond(laptop) {
+    margin-left: auto;
+    margin-right: auto;    
   }
 }
 
@@ -70,6 +110,9 @@
     font-size: 1.6rem;    
   }
 
+  @include respond(laptop) {
+    width: 100%;  
+  }  
 }
 
 .program__link {

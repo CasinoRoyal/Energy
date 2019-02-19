@@ -1,4 +1,12 @@
 .example {
+
+  @include respond(laptop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.example__box {
   font-size: 1.4rem;
 
   background-color: $color-secondary;
@@ -9,6 +17,15 @@
     align-items: center;
 
     background-color: #fff;
+  }
+
+  @include respond(desktop) {
+    flex-basis: 50%;
+    align-items: stretch;
+    padding: 7rem 0;
+    padding-left: 4rem;
+
+    background-color: $color-secondary;
   }
 }
 
@@ -22,6 +39,10 @@
 
   @include respond(phone-L) {
     font-size: 1.6rem;
+  }
+
+  @include respond(desktop) {
+    width: 43.5rem;
   }  
 }
 
@@ -34,6 +55,14 @@
     justify-content: flex-start;
     margin-right: auto;
     margin-bottom: 0;
+  }
+
+  @include respond(laptop) {
+    margin-bottom: 3rem;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 5rem;
   }
 }
 
@@ -67,6 +96,17 @@
     @include respond(phone-L) {
       background-color: #fff;
     }
+
+    @include respond(desktop) {
+      bottom: -.7rem;
+      margin-left: -6.5rem;
+      width: 13rem;
+      padding: 0;
+
+      font-size: 1.4rem;
+
+      background-color: $color-secondary;
+    }    
   }
 
     @include respond(phone-L) {
@@ -77,6 +117,10 @@
       &:not(:last-child) {
         margin-right: 4rem;
       }
+    }
+  
+    @include respond(desktop) {
+      width: 16.5rem;
     }
 }
 
@@ -94,4 +138,10 @@
 
       font-size: 2rem;
     }
+
+  @include respond(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 32.5rem;
+  }
 }

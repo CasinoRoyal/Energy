@@ -13,7 +13,13 @@
     justify-content: flex-end;
     margin-top: 23rem;
     margin-bottom: 0;
+  }
 
+  @include respond(desktop) {
+    flex-basis: 50%;
+    height: auto;
+    margin: 0;
+    padding-bottom: 7rem;
   }
 }
 

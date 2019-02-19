@@ -10,6 +10,15 @@
     text-align: left;
     color: $color-text-black;
   }
+
+  @include respond(laptop) {
+    position: relative;
+    height: 55rem;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 8rem;
+  }
 }
 
 .header__navigation {
@@ -29,6 +38,16 @@
   @include respond(phone-L) {
     justify-content: flex-start;
     border: none;
+  }
+
+  @include respond(laptop) {
+    position: absolute;
+    top: 1rem;
+    z-index: 200;
+    width: 100%;
+    padding: 0 4rem;
+
+    background-color: transparent;
   }
 }
 
@@ -78,6 +97,13 @@
     background-image: none;
     background-color: #fff;
   }
+
+  @include respond(laptop) {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+  }
+
 }
 
 .header__text-box {
@@ -87,6 +113,14 @@
     margin-left: 6rem;
     z-index: 100;
   }
+
+  @include respond(laptop) {
+    align-self: center;
+  }
+
+  @include respond(desktop) {
+    flex-basis: 50%;
+  }  
 }
 
 .header__title {
@@ -137,5 +171,31 @@
     left: -2.5rem;
     bottom: -2rem;
     margin-left: 0;
-  }  
+  } 
+
+  @include respond(laptop) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    flex-grow: 1;
+
+    background-image: url(../img/raster/index-background-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+    background-color: #65a93c;
+  }
+
+  @include respond(desktop) {
+    flex-basis: 50%;
+  } 
+}
+
+.header__pic img {
+  
+  @include respond(laptop) {
+    position: absolute;
+    top: 10rem;
+    left: -15rem;
+  } 
 }
