@@ -1,0 +1,154 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+
+  &--more{
+   
+    @include respond(tab) {
+      justify-content: flex-start;
+      outline: 1px solid #e6e6e6;
+    }
+  }
+}
+
+.card__img {
+  
+}
+
+.card__description {
+  width: 14rem;
+  margin-top: 2.4rem;
+
+  @include respond(tab) {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.card__title {
+  display: block;
+  margin-bottom: 1.5rem;
+
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $color-text-black;
+
+  @include respond(tab) {
+    font-size: 2rem;
+  }
+}
+
+.card__description > .card__title {
+  width: 10rem;
+
+  @include respond(tab) {
+    width: 13rem;
+  }
+}
+
+.card__subtitle {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+
+  color: $color-text-grey;
+
+  @include respond(tab)  {
+    width: 17rem;
+    margin-bottom: 5.9rem;
+
+    font-size: 1.6rem;
+  }
+}
+
+
+.card__table {
+  width: 100%;
+
+  list-style: none;
+}
+
+.card__property {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  color: $color-text-grey;
+
+  @include respond(tab) {
+    font-size: 1.6rem;
+  }
+}
+
+.card__property span{}
+
+.card__btn {
+  width: 100%;
+  padding: 1.1rem 0;
+  margin-bottom: 2.4rem;
+  
+  text-align: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--green { 
+    color: #fff;
+    background-color: $color-primary; 
+  }
+
+  &--grey { 
+    color: $color-text-black;
+    background-color: $color-secondary; 
+  }
+}
+
+.card__plus {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  margin: 2.5rem 0;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color:#cecece;
+  }
+
+  &::before {
+    width: 3rem;
+    height: .2rem;
+  
+    @include respond(tab) {
+      width: 6rem;
+    }
+  }
+
+  &::after {
+    width: .2rem;
+    height: 3rem;
+
+    @include respond(tab) {
+      height: 6rem;
+    }
+  }
+
+  @include respond(tab) {
+    height: 6rem;
+    margin: 5rem 0;
+  }
+}

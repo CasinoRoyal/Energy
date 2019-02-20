@@ -1,0 +1,40 @@
+.additional {
+  overflow: hidden;
+
+  @include respond(tab) {
+    padding: 0 3rem;
+  }  
+}
+
+.additional__cards {
+
+  @include respond(tab) {
+    margin-bottom: 7rem;
+  }   
+}
+
+.additional__cards .card {
+  border-top: 1px solid #cdcdcd;
+  margin: 0 2rem;
+  padding-top: 1rem;
+
+  &:last-child {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  @include respond(tab) {
+    margin: 0;
+    padding-top: 2.5rem;
+
+    justify-content: space-between;
+  }   
+}
+
+.additional__cards .card__table {
+  margin-bottom: 1rem;
+
+  @include respond(tab) {
+    width: 30%;
+    align-self: center;
+  } 
+}
