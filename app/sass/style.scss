@@ -8,12 +8,17 @@
 @import '_base/_fonts';
 
 // Sections
+//--index page
 @import '_sections/_header';
 @import '_sections/_programs';
 @import '_sections/_advantages';
 @import '_sections/_example';
 @import '_sections/_map';
 @import '_sections/_footer';
+
+//--catalog page
+@import '_sections/_catalog';
+@import '_sections/_additional';
 
 // Components
 @import '_components/_logo';
@@ -23,3 +28,6 @@
 @import '_components/_heading';
 @import '_components/_social';
 @import '_components/_range';
+
+@import '_components/_card';
+@import '_components/_bonus';

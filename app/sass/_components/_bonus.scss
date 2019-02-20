@@ -1,0 +1,35 @@
+.bonus {
+  height: 29rem;
+  margin: 0 2rem;
+  text-align: center;
+
+  color: #fff;
+  background-image: url(../img/raster/gift-photo-mobile@1x.jpg);
+  background-size: cover;
+
+  @include respond(tab) {
+    display: flex;
+    align-items: center;
+    height: 20rem;
+    margin: 0;
+    margin-bottom: 7.5rem;
+    text-align: left;
+
+    background-image: url(../img/raster/gift-photo-tablet@1x.jpg);
+  } 
+}
+
+.bonus__pic {}
+
+.bonus__description {
+  width: 16.5rem;
+  margin: 0 auto;
+
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  @include respond(tab) {
+    margin: 0;
+  }   
+}

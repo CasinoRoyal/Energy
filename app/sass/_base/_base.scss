@@ -20,8 +20,9 @@ body {
 }
 
 img {
- max-width: 100%;
- height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .wrapper {
@@ -31,7 +32,7 @@ img {
     padding: 0 3rem;
   }
 
-  @include respond(phone-L) {
+  @include respond(laptop) {
     padding: 0 4rem;
   }
 }

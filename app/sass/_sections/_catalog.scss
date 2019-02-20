@@ -1,0 +1,82 @@
+.catalog {
+
+}
+
+.catalog__cards {
+  
+  @include respond(tab) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3rem;
+    justify-content: center;
+  }
+}
+
+.catalog__cards .card {
+  border-top: 1px solid $color-secondary;
+
+  &:last-child {
+    border-bottom: 1px solid $color-secondary;
+  }
+
+  @include respond(tab) {
+    flex-direction: column;
+    align-items: center;
+    width: 32.4rem;
+    padding: 0;
+    margin: 7rem 0;
+    margin-right: 3rem;
+
+    border: none;
+    background-color: $color-secondary;
+
+    &--more {
+      background-color: transparent;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
+      margin-left: 3rem;
+    }
+  }
+}
+
+.catalog__cards .card__description {
+
+  @include respond(tab) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+  }
+}
+
+.catalog__cards .card__property {
+
+  @include respond(tab) {
+    padding: .7rem 0;
+
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog__cards .card__btn {
+
+  @include respond(tab) {
+    width: 25rem;
+  }  
+  
+}
+
+.card__plus ~ .card__title {
+
+  @include respond(tab) {
+    width: 17rem;
+    margin-bottom: 2.5rem;
+  }    
+
+}

@@ -1,12 +1,44 @@
 .navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e6e6e6;
+
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  background-color: #fff;
+
+  @include respond(phone-L) {
+    justify-content: flex-start;
+    border: none;
+  }
+
+  @include respond(laptop) {
+    position: absolute;
+    top: 1rem;
+    z-index: 200;
+    width: 100%;
+    padding: 0 4rem;
+
+    background-color: transparent;
+  }
+}
+
+.navigation__list {
   flex-basis: 100%;
   order: 1;
-
+  
+  list-style: none;
   font-weight: 500;
 
   color: $color-text-black;
 
   @include respond(phone-L) {
+    display: flex;
     margin-left: auto;
     flex-basis: auto;
 
@@ -25,15 +57,6 @@
   
   @include respond(desktop) {
     font-size: 2rem;
-  }
-}
-
-.navigation__list {
-  list-style: none;
-
-
-  @include respond(phone-L) {
-    display: flex;
   }
 }
 
@@ -76,4 +99,32 @@
 .navigation__link {
   text-decoration: none;
   color: currentColor;
+}
+
+.navigation__hamburger {
+  position: relative;
+  width: 2.4rem;
+  height: .2rem;
+  border: none;
+
+  background-color: #222;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2.4rem;
+    height: .2rem;
+
+    background-color: #222;
+  }
+
+  &::before { top: -.6rem; }
+  &::after  { top: .6rem; }
+
+  @include respond(phone-L) {
+    display: none;
+  }
 }

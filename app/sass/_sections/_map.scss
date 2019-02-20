@@ -26,6 +26,10 @@
   }  
 }
 
+.additional + .map > .address-box {
+  background-color: $color-secondary;
+}
+
 .address__title {
   margin-right: auto;
 
