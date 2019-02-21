@@ -1,0 +1,69 @@
+form.form(action="" method="POST")
+  
+  fieldset.form__set
+    .form__group
+      
+      label.form__label(for="name") Имя:*
+        input.form__input(id="name" type="text" required)
+      
+      label.form__label(for="weight") Вес (кг):*
+        input.form__input(id="weight" type="text" required)
+      
+      label.form__label(for="age") Возраст (лет):
+        input.form__input(id="age" type="text")
+
+    .form__group.form__group--radio
+      
+      label.form__label(for="slimming") Похудение
+        input.form__radio(id="slimming" type="radio" name="diet")
+        span.form__check.form__check--radio
+      
+      label.form__label(for="muscle") Набор массы
+        input.form__radio(id="muscle" type="radio" name="diet")
+        span.form__check.form__check--radio
+      
+      label.form__label(for="advice") Не знаю (нужен ваш совет)
+        input.form__radio(id="advice" type="radio" name="diet")
+        span.form__check.form__check--radio
+  
+  fieldset.form__set
+    legend.heading.heading--secondary.heading--line.
+      Контактные данные (владельца кота)
+    .form__group
+      
+      label.form__label(for="email") E-mail:*
+        input.form__input(id="email" type="email" required)
+      
+      label.form__label(for="phone") Телефон:*
+        input.form__input(id="phone" type="tel" required)
+  
+  fieldset.form__set
+    legend.heading.heading--secondary.heading--line.
+      Коментарий
+    .form__group
+      textarea.form__area(name="", cols="30", rows="10")
+
+  fieldset.form__set
+    legend.heading.heading--secondary.heading--line.
+      Дополнительно
+    .form__group.form__group--checkbox
+      
+      label.form__label(for="sugar") Сахарозаменитель
+        input.form__checkbox(id="sugar" type="checkbox")
+        span.form__check.form__check--checkbox
+      
+      label.form__label(for="water") Питьевая вода
+        input.form__checkbox(id="water" type="checkbox")
+        span.form__check.form__check--checkbox
+      
+      label.form__label(for="milk") Молоко
+        input.form__checkbox(id="milk" type="checkbox")
+        span.form__check.form__check--checkbox
+      
+      label.form__label(for="vitamins") Витамины
+        input.form__checkbox(id="vitamins" type="checkbox")
+        span.form__check.form__check--checkbox
+  
+  .form__group.form__group--button-box
+    button.btn.btn--form(type="submit") Отправить заявку
+    span.form__text * &mdash; Обязательные поля

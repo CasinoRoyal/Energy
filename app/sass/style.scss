@@ -8,6 +8,7 @@
 @import '_base/_fonts';
 
 // Sections
+
 //--index page
 @import '_sections/_header';
 @import '_sections/_programs';
@@ -20,6 +21,9 @@
 @import '_sections/_catalog';
 @import '_sections/_additional';
 
+//--profile page
+@import '_sections/_profile';
+
 // Components
 @import '_components/_logo';
 @import '_components/_shop-name';
@@ -31,3 +35,5 @@
 
 @import '_components/_card';
 @import '_components/_bonus';
+
+@import '_components/_form';
