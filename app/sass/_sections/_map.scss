@@ -14,7 +14,7 @@
   display: flex;
   padding: 3rem 2rem;
 
-  background-color: #fff;
+  background-color: $color-secondary;
 
   @include respond(desktop) {
     position: absolute;
@@ -23,18 +23,16 @@
     width: 57rem;
     padding: 6rem 7rem;
     transform: translateY(-50%);
+
+    background-color: #fff;
   }  
 }
 
-.additional + .map > .address-box {
+.example + .map > .address-box {
   
   @include respond(tab) {
-    background-color: $color-secondary;
-  }    
-  
-  @include respond(desktop) {
     background-color: #fff;
-  }      
+  }    
   
 }
 

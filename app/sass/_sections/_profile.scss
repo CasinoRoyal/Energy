@@ -5,4 +5,14 @@
 .profile__subtitle {
   width: 23rem;
   margin-bottom: 3.5rem;
+  text-transform: uppercase;
+
+  @include respond(tab) {
+    width: 40rem;
+    padding-left: 4rem;
+    margin-left: 3rem;
+
+    font-size: 2rem;
+    line-height: 3rem;
+  }  
 }

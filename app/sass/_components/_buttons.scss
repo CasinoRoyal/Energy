@@ -51,5 +51,11 @@
     color: #fff;
     background-color: $color-primary;
     border: none;
+
+    @include respond(tab) {
+      width: 28rem;
+      margin-right: 6rem;
+      margin-bottom: 0;
+    }      
   }
 }
