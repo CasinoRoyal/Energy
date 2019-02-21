@@ -16,7 +16,16 @@
     text-align: left;
 
     background-image: url(../img/raster/gift-photo-tablet@1x.jpg);
-  } 
+  }
+
+  @include respond(desktop) {
+    flex-direction: column;
+    height: 29rem;
+    width: 24.5rem;
+    text-align: center;
+
+    background-image: url(../img/raster/gift-photo-desktop@1x.jpg);
+  }   
 }
 
 .bonus__pic {}

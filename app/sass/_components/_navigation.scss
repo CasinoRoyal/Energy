@@ -17,14 +17,14 @@
     border: none;
   }
 
-  @include respond(laptop) {
-    position: absolute;
-    top: 1rem;
-    z-index: 200;
-    width: 100%;
-    padding: 0 4rem;
+  @include respond(tab) {
+    padding: 3rem 3rem;
+    padding-bottom: 0;
+  }
 
-    background-color: transparent;
+  @include respond(desktop) {
+    padding: 5rem 4rem;
+    padding-bottom: 0;
   }
 }
 
@@ -46,13 +46,12 @@
     font-weight: 400;
   }
 
-  @include respond(phone-L) {
+  @include respond(tab) {
     font-size: 1.8rem;
   }
 
   @include respond(laptop) {
     font-size: 1.6rem;
-    color: #fff;
   }
   
   @include respond(desktop) {
@@ -88,11 +87,6 @@
 
   @include respond(laptop) {
     padding: .5rem 0;
-    
-    &:hover {
-      box-shadow: 0 .2rem 0 #fff;
-
-    }
   }
 }
 
@@ -126,5 +120,37 @@
 
   @include respond(phone-L) {
     display: none;
+  }
+}
+
+//СТИЛИЗАЦИЯ ОТ ХЕДЕРА НА ГЛАВНОЙ СТРАНИЦЕ 
+
+.header .navigation {
+  
+  @include respond(laptop) {
+    position: absolute;
+    top: 1rem;
+    z-index: 200;
+    width: 100%;
+    padding: 0 4rem;
+
+    background-color: transparent;
+  
+  }
+}
+
+.header .navigation__list {
+  
+  @include respond(laptop) {
+    color: #fff;
+  }
+}
+
+.header .navigation__item {
+  
+  @include respond(laptop) {
+    &:hover {
+      box-shadow: 0 .2rem 0 #fff;
+    }
   }
 }

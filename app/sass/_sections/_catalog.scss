@@ -1,5 +1,10 @@
 .catalog {
 
+  // @include respond(desktop-L) {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  // }  
 }
 
 .catalog__cards {
@@ -7,12 +12,23 @@
   @include respond(tab) {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 3rem;
+    margin: 0 3rem;
     justify-content: center;
   }
+
+  @include respond(laptop) {
+    margin: 0 4rem;
+    justify-content: space-around;
+  }  
+
+  @include respond(desktop-L) {
+    justify-content: space-between;
+  }  
 }
 
 .catalog__cards .card {
+  justify-content: center;
+
   border-top: 1px solid $color-secondary;
 
   &:last-child {
@@ -25,7 +41,7 @@
     width: 32.4rem;
     padding: 0;
     margin: 7rem 0;
-    margin-right: 3rem;
+    text-align: center;
 
     border: none;
     background-color: $color-secondary;
@@ -38,9 +54,26 @@
       border-bottom: none;
     }
 
-    &:nth-child(2n) {
-      margin-right: 0;
-      margin-left: 3rem;
+    &:not(:nth-child(even)) {
+      margin-right: 6rem;
+    }
+  }
+
+  @include respond(laptop) {
+    &:not(:nth-child(even)) {
+      margin-right: 15rem;
+    }
+  }  
+
+  @include respond(desktop-L) {
+    width: 24.5rem;
+
+    &:not(:nth-child(even)) {
+      margin-right: 0rem;
+    }
+
+    &:not(:nth-child(4n)) {
+      margin-right: 8rem;
     }
   }
 }
@@ -53,6 +86,10 @@
     align-items: center;
     width: 25rem;
   }
+
+  @include respond(desktop) {
+    width: 17rem;
+  }  
 }
 
 .catalog__cards .card__property {
@@ -69,7 +106,10 @@
   @include respond(tab) {
     width: 25rem;
   }  
-  
+
+  @include respond(desktop) {
+    width: 17rem;
+  }   
 }
 
 .card__plus ~ .card__title {

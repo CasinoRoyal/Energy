@@ -27,7 +27,15 @@
 }
 
 .additional + .map > .address-box {
-  background-color: $color-secondary;
+  
+  @include respond(tab) {
+    background-color: $color-secondary;
+  }    
+  
+  @include respond(desktop) {
+    background-color: #fff;
+  }      
+  
 }
 
 .address__title {

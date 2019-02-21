@@ -3,6 +3,12 @@
 
   @include respond(tab) {
     padding: 0 3rem;
+  }
+
+  @include respond(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 3rem;
   }  
 }
 
@@ -10,7 +16,12 @@
 
   @include respond(tab) {
     margin-bottom: 7rem;
-  }   
+  }
+
+  @include respond(desktop) {
+    width: 70%;
+    margin-right: 8rem;
+  }       
 }
 
 .additional__cards .card {
@@ -27,14 +38,40 @@
     padding-top: 2.5rem;
 
     justify-content: space-between;
-  }   
+  }
+
+  @include respond(laptop) {
+    align-items: center;
+  }
+
+  @include respond(desktop) {
+    padding-top: 1.5rem;
+  }      
+}
+
+.additional__cards .card__title {
+
+  @include respond(laptop) {
+    width: 20rem;
+  } 
 }
 
 .additional__cards .card__table {
   margin-bottom: 1rem;
 
   @include respond(tab) {
-    width: 30%;
+    width: 27%;
     align-self: center;
   } 
+}
+
+.additional__cards .card__btn {
+
+  @include respond(laptop) {
+    width: 24.5rem;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 1.5rem;
+  }     
 }

@@ -1,13 +1,10 @@
 .card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
 
   &--more{
    
     @include respond(tab) {
-      justify-content: flex-start;
       outline: 1px solid #e6e6e6;
     }
   }
