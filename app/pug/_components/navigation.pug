@@ -1,18 +1,30 @@
 nav.navigation
   a.logo-box
-    img.logo(src="../img/vector/logo-mobile.svg", alt="Логотип 'Cat Energy'")
+    picture
+      source(
+        media="(min-width: 64em)",
+        srcset="../img/vector/logo-desktop.svg"
+      )      
+      source(
+        media="(min-width: 48em)",
+        srcset="../img/vector/logo-tablet.svg"
+      )
+      img.logo(
+        src="../img/vector/logo-mobile.svg", 
+        alt="Логотип 'Cat Energy'"
+      )
         
-    include ../_components/shop-name
+  include ../_components/shop-name
 
-  ul.navigation__list
+  ul.navigation__list.navigation--no-js
     
     li.navigation__item
-      a.navigation__link(href="#") Главная
+      a.navigation__link(href="index.html") Главная
     
     li.navigation__item
-      a.navigation__link(href="#") Каталог продукции
+      a.navigation__link(href="shop.html") Каталог продукции
     
     li.navigation__item
-      a.navigation__link(href="#") Подбор программы
+      a.navigation__link(href="form.html") Подбор программы
 
-  button.navigation__hamburger
+  button.navigation__hamburger.navigation__hamburger--no-js

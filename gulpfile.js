@@ -9,6 +9,10 @@ const svgStore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
 const plumber = require("gulp-plumber");
 const del = require("del");
+const spritesmith = require('gulp.spritesmith');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
 
 
 gulp.task('pug', function () {
@@ -41,6 +45,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   gulp.watch('app/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('app/sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('app/js/**/*.js', gulp.series('js'));
   gulp.watch('app/img/**/*', gulp.series('image:dev'));
 })
 
@@ -66,8 +71,20 @@ gulp.task('image:dev', function () {
     .pipe(gulp.dest("build/img"));
 })
 
+gulp.task('sprite:raster', function() {
+  let spriteData = gulp.src("app/img/raster/advantage-*.png")
+  .pipe(spritesmith({
+    retinaSrcFilter: ['app/img/raster/advantage-*@2x.png'],
+    imgName: "sprite.png",
+    retinaImgName: 'sprite@2x.png',
+    cssName: "sprite.css",
+    padding: 20
+  }))
+  return spriteData.pipe(gulp.dest("build/img/raster/sprite"));
+})
+
 gulp.task('sprite', function () {
-  return gulp.src("app/img/sprite/*.svg")
+  return gulp.src("app/img/vector/*.svg")
     .pipe(cheerio({
       run: function($) {
         $("[fill]").removeAttr("fill");
@@ -77,12 +94,20 @@ gulp.task('sprite', function () {
     .pipe(svgStore({
       inlineSvg: true
     }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/vector"));
 })
 
 gulp.task('fonts', function () {
   return gulp.src("app/fonts/**/*")
     .pipe(gulp.dest("build/fonts"));
+})
+
+gulp.task('js', function (cb) {
+  pump([
+    gulp.src("app/js/*.js"),
+    concat("main.min.js"),
+    gulp.dest("build/js")
+  ], cb);
 })
 
 gulp.task('clean', function () {
@@ -94,9 +119,11 @@ gulp.task('dev', gulp.series(
   gulp.parallel(
     'pug',
     'sass',
+    'js',
     'fonts',
     'image:dev',
-    'sprite'
+    'sprite',
+    'sprite:raster'
     )
   ))
 

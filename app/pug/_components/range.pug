@@ -1,6 +1,15 @@
 .range
   .range__pic
-    img(src="../img/before-mobile.png", alt="Кот до программы")
+    picture
+      source(
+        media="(min-width:64em)",
+        srcset="../img/raster/before-desktop@1x.png 1x, ../img/raster/before-desktop@2x.png 2x"
+      )
+      source(
+        media="(min-width:37.5em)",
+        srcset="../img/raster/before-tablet@1x.png 1x, ../img/raster/before-tablet@2x.png 2x"
+      )
+      img(srcset="../img/raster/before-mobile@2x.png 2x", src="../img/raster/before-mobile@1x.png", alt="Кот до программы")
 
   .range__box
     span Было 

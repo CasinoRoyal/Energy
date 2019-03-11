@@ -25,6 +25,10 @@ img {
   height: auto;
 }
 
+a[href]:not([class]) {
+  display: block;
+  text-decoration: none;
+}
 .wrapper {
   padding: 0 2rem;
 
@@ -35,4 +39,16 @@ img {
   @include respond(laptop) {
     padding: 0 4rem;
   }
+}
+
+.visually-hidden { 
+  display: block;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(1px);
+  white-space: nowrap;
+  position: absolute;
 }

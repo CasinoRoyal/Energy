@@ -10,9 +10,13 @@
   }
 
   @include respond(laptop) {
-    margin-bottom: 5rem;  
+    margin-bottom: 0rem;  
 
     border: none;
+  }
+
+  @include respond(desktop) {
+    margin-bottom: 3rem;  
   }
 }
 
@@ -41,7 +45,7 @@
     }
 
     &::after {
-      content: '1';
+      content: '';
       position: absolute;
       top: 10rem;
       right: -3rem;
@@ -69,14 +73,43 @@
   }
 
   @include respond(laptop) {
-    
-    &:not(:nth-child(odd)) {
-      margin: 0;
+    width: 23rem;
+    min-height: 23rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
 
     &:not(:last-child) {
       margin-right: auto;
+    }
+
+    &:not(:nth-child(odd)) {
+      margin-bottom: 0;
     }   
+  }
+
+  @include respond(desktop) {
+    width: 24rem; 
+  }
+}
+
+.advantage {
+  @include respond(phone-L) {
+    &--1::after {
+      content: "1";
+    }
+
+    &--2::after {
+      content: "2";
+    } 
+
+    &--3::after {
+      content: "3";
+    }
+    &--4::after {
+      content: "4";
+    }           
   }
 }
 
@@ -88,12 +121,66 @@
 
   background-color: $color-primary;
 
+  &--leaf {
+    background-image: url(../img/raster/sprite/sprite.png);
+    background-position: .5rem -6.5rem;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(../img/raster/sprite/sprite@2x.png);
+      background-size: 120px 120px;
+    }
+  }
+  &--dining {
+    background-image: url(../img/raster/sprite/sprite.png);
+    background-position: -6.5rem .5rem;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(../img/raster/sprite/sprite@2x.png);
+      background-size: 120px 120px;
+    }
+  }
+  &--powder {
+    background-image: url(../img/raster/sprite/sprite.png);
+    background-position: -6.5rem -6.5rem;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(../img/raster/sprite/sprite@2x.png);
+      background-size: 120px 120px;
+    }
+  }
+  &--clock {
+    background-image: url(../img/raster/sprite/sprite.png);
+    background-position: .5rem .5rem;
+    background-repeat: no-repeat;
+
+    @include retina {
+      background-image: url(../img/raster/sprite/sprite@2x.png);
+      background-size: 120px 120px;
+    }
+  }
 
   @include respond(phone-L) {
     width: 8rem;
     height: 8rem;
     margin: 0;
     margin-bottom: 3.5rem;
+
+    &--leaf {
+      background-position: 1.5rem -5.7rem;
+    }
+    &--dining {
+      background-position: -5.7rem 1.5rem;
+    }
+    &--powder {
+      background-position: -5.7rem -5.7rem;
+    }
+    &--clock {
+      background-position: 1.5rem 1.5rem;
+      
+    }
   }
 }
 

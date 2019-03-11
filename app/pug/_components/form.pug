@@ -33,9 +33,13 @@ form.form(action="" method="POST")
       
       label.form__label(for="email") E-mail:*
         input.form__input(id="email" type="email" required)
+        svg.form__icon.form__icon--email
+          use(xlink:href="../img/vector/vector.svg#icon-mail")
       
       label.form__label(for="phone") Телефон:*
         input.form__input(id="phone" type="tel" required)
+        svg.form__icon.form__icon--phone
+          use(xlink:href="../img/vector/vector.svg#icon-phone")
   
   fieldset.form__set
     legend.heading.heading--secondary.heading--line.

@@ -28,7 +28,16 @@
   }
 }
 
+.navigation .shop-name {
+  
+  @include respond(tab) {
+    display: none;
+  }
+}
+
 .navigation__list {
+  display: none;
+  margin-top: 1.5rem;
   flex-basis: 100%;
   order: 1;
   
@@ -36,10 +45,17 @@
   font-weight: 500;
 
   color: $color-text-black;
+  transition: all .2s;
+
+  &--shown,
+  .navigation--no-js {
+    display: block;
+  }
 
   @include respond(phone-L) {
     display: flex;
     margin-left: auto;
+    margin-top: 0;
     flex-basis: auto;
 
     font-size: 1.4rem;
@@ -60,10 +76,14 @@
 }
 
 .navigation__item {
-  padding: 2rem 0;
-
+  text-align: center;
   border-top: 2px solid #e6e6e6;
   cursor: pointer;
+  transition: all .3s;
+
+  &:active {
+    opacity: .6;
+  }
 
   @include respond(phone-L) {
     border: none;
@@ -74,6 +94,7 @@
     }
 
     &:hover {
+      opacity: .8;
       box-shadow: 0 .2rem 0 $color-primary;
     }
   }
@@ -91,8 +112,15 @@
 }
 
 .navigation__link {
+  display: block;
+  padding: 2rem 0;
+
   text-decoration: none;
   color: currentColor;
+
+  @include respond(phone-L) {
+    padding: 0;
+  }
 }
 
 .navigation__hamburger {
@@ -103,6 +131,7 @@
 
   background-color: #222;
   cursor: pointer;
+  transition: all .4s;
 
   &::before,
   &::after {
@@ -113,13 +142,34 @@
     height: .2rem;
 
     background-color: #222;
+    transition: all .4s;
   }
 
   &::before { top: -.6rem; }
   &::after  { top: .6rem; }
 
+  &--no-js {
+    display: none;
+  }
+
   @include respond(phone-L) {
     display: none;
+  }
+}
+
+.navigation__hamburger--close {
+  background-color: transparent;
+  
+  &::before,
+  &::after {
+    top: 0;
+  }
+
+  &::before { 
+    transform: rotate(45deg); 
+  }
+  &::after  { 
+    transform: rotate(-45deg); 
   }
 }
 
@@ -129,13 +179,17 @@
   
   @include respond(laptop) {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     z-index: 200;
     width: 100%;
     padding: 0 4rem;
 
     background-color: transparent;
   
+  }
+
+  @include respond(laptop) {
+    top: 3rem;
   }
 }
 

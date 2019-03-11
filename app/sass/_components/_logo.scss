@@ -1,3 +1,20 @@
 .logo {
   width: 3rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .6;
+  }
+
+  @include respond(tab) {
+    width: 17rem;
+  }
+
+  @include respond(desktop) {
+    width: 20rem;
+  }
 }

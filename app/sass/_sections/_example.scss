@@ -1,4 +1,10 @@
 .example {
+  padding-top: .5px;
+  background-color: $color-secondary;
+
+  @include respond(phone-L) {
+    background-color: #fff;
+  }
 
   @include respond(laptop) {
     display: flex;
@@ -9,14 +15,10 @@
 .example__box {
   font-size: 1.4rem;
 
-  background-color: $color-secondary;
-
   @include respond(phone-L) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
-    background-color: #fff;
   }
 
   @include respond(desktop) {

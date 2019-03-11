@@ -7,8 +7,14 @@
   color: #fff;
 
   @include respond(phone-L) {
+    height: 35rem;
+
     text-align: left;
     color: $color-text-black;
+  }
+
+  @include respond(tab) {
+    height: 90rem;
   }
 
   @include respond(laptop) {
@@ -26,11 +32,14 @@
   height: 30rem;
   margin-bottom: 13rem;
 
-  background-image: url(../img/header-background.jpg);
+  background-image: url(../img/raster/index-background-mobile@1x.jpg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-color: #65a93c;
 
+  @include retina {
+    background-image: url(../img/raster/index-background-mobile@2x.jpg);
+  }
 
   @include respond(phone-L) {
     height: auto;
@@ -61,6 +70,7 @@
   }
 
   @include respond(desktop) {
+    padding-left: 8rem;
     flex-basis: 50%;
   }  
 }
@@ -110,13 +120,19 @@
 
 
   @include respond(phone-L) {
-    left: -2.5rem;
-    bottom: -2rem;
+    top: 0;
+    bottom: 0;
     margin-left: 0;
+  }
+
+  @include respond(tab) {
+    top: 21rem;
+    left: -2rem;
   } 
 
   @include respond(laptop) {
     position: relative;
+    top: 0;
     left: 0;
     bottom: 0;
     flex-grow: 1;
@@ -126,6 +142,10 @@
     background-size: contain;
     background-position-x: right;
     background-color: #65a93c;
+
+    @include retina {
+      background-image: url(../img/raster/index-background-desktop@2x.jpg);
+    }
   }
 
   @include respond(desktop) {

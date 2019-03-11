@@ -34,14 +34,81 @@
   @include respond(phone-L) {
     position: absolute;
     top: -15rem;
+    left: 50%;
+    margin-left: -29.2rem;
     margin-bottom: 0;
   }
+
+  @include respond(tab) {
+    top: -17rem;
+    margin-left: -34.5rem;
+  }
+
+  @include respond(laptop) {
+    top: -18rem;
+  }
+
+  @include respond(desktop) {
+    top: -19rem;
+  }      
 }
 
 .range__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
   text-align: center;
 
   @include respond(phone-L) {
     font-size: 2rem;
+  }
+}
+
+.range__line {
+  position: relative;
+  display: inline-block;
+  margin: 0 1.8rem;  
+  width: 30%;
+  height: 1.4rem;
+
+  border: 1px solid #dcdcdc;
+  border-radius: .5rem;
+  background-color: #fff;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: .3rem;
+    left: .5rem;
+    width: 2rem;
+    height: .6rem;
+    
+    border-radius: .5rem;
+    background-color: $color-primary;
+  }
+
+  @include respond(phone-L) {
+    width: 70%;
+    height: .6rem;
+    
+    background-color: #dcdcdc;
+
+    &::before {
+
+      top: -1.2rem;
+      left: 50%;
+      margin-left: -1.6rem;
+      width: .8rem;
+      height: .8rem;
+      margin-top: -.1rem;
+      box-sizing: content-box;
+
+      border: 1.2rem solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 .5rem .2rem rgba(#000, .15);
+    }
   }
 }

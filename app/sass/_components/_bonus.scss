@@ -1,34 +1,54 @@
 .bonus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   height: 29rem;
   margin: 0 2rem;
-  text-align: center;
+  margin-bottom: 3.5rem;
 
   color: #fff;
   background-image: url(../img/raster/gift-photo-mobile@1x.jpg);
   background-size: cover;
 
+  @include retina {
+    background-image: url(../img/raster/gift-photo-mobile@2x.jpg);
+  }
+
   @include respond(tab) {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
     height: 20rem;
     margin: 0;
     margin-bottom: 7.5rem;
     text-align: left;
 
     background-image: url(../img/raster/gift-photo-tablet@1x.jpg);
+
+    @include retina {
+      background-image: url(../img/raster/gift-photo-tablet@2x.jpg);
+    }   
   }
 
   @include respond(desktop) {
     flex-direction: column;
+    justify-content: space-evenly;
     height: 29rem;
     width: 24.5rem;
     text-align: center;
 
     background-image: url(../img/raster/gift-photo-desktop@1x.jpg);
+
+    @include retina {
+      background-image: url(../img/raster/gift-photo-desktop@2x.jpg);
+    }
   }   
 }
 
-.bonus__pic {}
+.bonus__pic {
+  fill: #fff;
+}
 
 .bonus__description {
   width: 16.5rem;

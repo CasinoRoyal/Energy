@@ -1,9 +1,6 @@
 .map {
   height: 36rem;
 
-  background-image: url(../img/map.jpg);
-  background-size: cover;
-
   @include respond(desktop) {
     position: relative;
     height: 40rem;
@@ -11,13 +8,15 @@
 }
 
 .address-box {
+  position: absolute;
+  z-index: 100;
   display: flex;
+  width: 100%;
   padding: 3rem 2rem;
 
   background-color: $color-secondary;
 
   @include respond(desktop) {
-    position: absolute;
     top: 50%;
     left: 4rem;
     width: 57rem;
@@ -28,12 +27,16 @@
   }  
 }
 
+#map {
+  height: 36rem;
+
+  @include respond(desktop) {
+    height: 40rem;
+  }
+}
+
 .example + .map > .address-box {
-  
-  @include respond(tab) {
-    background-color: #fff;
-  }    
-  
+  background-color: #fff;
 }
 
 .address__title {

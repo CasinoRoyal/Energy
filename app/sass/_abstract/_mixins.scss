@@ -1,6 +1,6 @@
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-L {
-    @media (min-width: 37.5em) { @content }; //500
+    @media (min-width: 37.5em) { @content }; //600
   }
   @if $breakpoint == tab {
     @media (min-width: 48em) { @content }; //768
@@ -14,4 +14,9 @@
   @if $breakpoint == desktop-L {
     @media (min-width: 81.25em) { @content }; //1300
   }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) { @content }
 }

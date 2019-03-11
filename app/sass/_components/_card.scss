@@ -11,11 +11,22 @@
 }
 
 .card__img {
-  
+  width: 50%;
+
+  @include respond(tab) {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    transform: translateY(12rem);
+  }
+}
+
+.card__img img {
+  margin: 0 auto;
 }
 
 .card__description {
-  width: 14rem;
+  width: 50%;
   margin-top: 2.4rem;
 
   @include respond(tab) {
@@ -50,6 +61,7 @@
 .card__subtitle {
   width: 100%;
   margin-bottom: 2rem;
+  text-align: center;
 
   font-family: Arial, sans-serif;
   font-size: 1.2rem;
@@ -98,14 +110,32 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  transition: all .1s;
+
   &--green { 
     color: #fff;
     background-color: $color-primary; 
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba(#fff, .3);
+    }
   }
 
   &--grey { 
     color: $color-text-black;
     background-color: $color-secondary; 
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba($color-text-black, .3);
+    }
   }
 }
 

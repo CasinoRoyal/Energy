@@ -25,6 +25,10 @@
     padding: 4rem;
   }
 
+  @include respond(tab) {
+    padding: 5rem;
+  }
+
   @include respond(laptop) {
     flex-direction: row;
     align-items: center;
@@ -47,6 +51,7 @@
 }
 
 .program__logo {
+  position: relative;
   width: 5rem;
   height: 5rem;
   margin-right: 2rem;
@@ -73,6 +78,43 @@
     margin: 0;
     order: 0;  
   }
+}
+
+.program__pic {
+  position: absolute;
+  left: -1rem;
+  width: 7rem;
+  height: 5rem;
+
+  &--slim {
+    top: -.3rem;
+  }
+
+  @include respond(phone-L) {
+    left: -1.5rem;
+    width: 20rem;
+    height: 17rem;
+  }
+
+  @include respond(tab) {
+    left: -3.5rem;
+    width: 27rem;
+    height: 19.5rem;
+
+    &--slim {
+      top: -1.2rem;
+    }
+  }
+
+  @include respond(laptop) {
+    left: -1.8rem;
+    width: 13.5rem;
+    height: 9.8rem;
+
+    &--slim {
+      top: -1rem;
+    }
+  }     
 }
 
 .program__title {
@@ -116,11 +158,24 @@
 }
 
 .program__link {
+  display: flex;
+  align-items: center;
+
   font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
 
   color: inherit;
+  transition: all .2s;
+
+  &:hover .program__arrow {
+    width: 3rem;
+  }
+
+  &:active,
+  &:active .program__arrow {
+    opacity: .3;
+  }
 
   @include respond(phone-L) {
     font-size: 1.8rem;
@@ -129,4 +184,12 @@
   @include respond(tab) {
     font-size: 2rem;
   }
+}
+
+.program__arrow {
+  width: 2.4rem;
+  height: 1rem;
+  margin-left: 2rem;
+
+  transition: all .2s;
 }
