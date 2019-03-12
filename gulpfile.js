@@ -58,11 +58,7 @@ gulp.task('serve', function () {
 
 gulp.task('image:build', function () {
   return gulp.src("app/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
+    .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
 })
 
@@ -122,6 +118,19 @@ gulp.task('dev', gulp.series(
     'js',
     'fonts',
     'image:dev',
+    'sprite',
+    'sprite:raster'
+    )
+  ))
+
+gulp.task('build', gulp.series(
+  'clean',
+  gulp.parallel(
+    'pug',
+    'sass',
+    'js',
+    'fonts',
+    'image:build',
     'sprite',
     'sprite:raster'
     )

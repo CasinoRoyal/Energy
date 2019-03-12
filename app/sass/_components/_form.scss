@@ -224,7 +224,7 @@
     border-color: #444;
   }
 
-  &:invalid {
+  &:focus:invalid {
     border-color: #ff8282;
   }
 }
@@ -272,7 +272,7 @@
   fill: $color-primary;
 }
 
-.form__input:invalid + .form__icon {
+.form__input:focus:invalid + .form__icon {
   fill: #ff8282;
 }
 
