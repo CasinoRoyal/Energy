@@ -7,7 +7,7 @@ form.form(action="" method="POST")
         input.form__input(id="name" type="text" required)
       
       label.form__label(for="weight") Вес (кг):*
-        input.form__input(id="weight" type="text" required placeholder="Вес")
+        input.form__input(id="weight" type="text" required)
       
       label.form__label(for="age") Возраст (лет):
         input.form__input(id="age" type="text")
@@ -45,7 +45,7 @@ form.form(action="" method="POST")
     legend.heading.heading--secondary.heading--line.
       Коментарий
     .form__group
-      textarea.form__area(name="", cols="30", rows="10")
+      textarea.form__area(name="", cols="30", rows="10" placeholder="Ваш коментарий")
 
   fieldset.form__set
     legend.heading.heading--secondary.heading--line.
